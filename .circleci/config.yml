@@ -18,7 +18,8 @@ steps-test: &steps-test
               sudo apt-get install --no-install-recommends -y wine32-development
             ;;
             Darwin)
-              brew install wine mono
+              brew cask install wine-stable
+              brew install mono
             ;;
           esac
     - checkout
