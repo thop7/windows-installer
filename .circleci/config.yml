@@ -39,8 +39,9 @@ step-install-os-dependencies: &step-install-os-dependencies
     command: |
       case "$(uname)" in
         Linux)
+          sudo dpkg --add-architecture i386
           sudo apt-get -qq update
-          sudo apt-get install --no-install-recommends -y wine64 wine32
+          sudo apt-get install --no-install-recommends -y wine64-development wine32-development
           wine hostname
         ;;
         Darwin)
