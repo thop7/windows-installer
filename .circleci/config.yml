@@ -40,7 +40,7 @@ step-install-os-dependencies: &step-install-os-dependencies
       case "$(uname)" in
         Linux)
           sudo apt-get -qq update
-          sudo apt-get install --no-install-recommends -y wine64
+          sudo apt-get install --no-install-recommends -y wine64 wine32
           wine hostname
         ;;
         Darwin)
