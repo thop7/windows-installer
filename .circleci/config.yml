@@ -47,7 +47,7 @@ step-install-os-dependencies: &step-install-os-dependencies
         Darwin)
           brew cask install xquartz wine-stable
           brew install mono
-          wine hostname
+          wine64 hostname
         ;;
       esac
 
