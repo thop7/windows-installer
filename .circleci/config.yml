@@ -41,7 +41,7 @@ step-install-os-dependencies: &step-install-os-dependencies
         Linux)
           sudo dpkg --add-architecture i386
           sudo apt-get -qq update
-          sudo apt-get install --no-install-recommends -y wine64-development wine32-development
+          sudo apt-get install --no-install-recommends -y wine64 wine32
           wine64 hostname
         ;;
         Darwin)
